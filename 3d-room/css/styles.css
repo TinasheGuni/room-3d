@@ -1,0 +1,204 @@
+body {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 11px;
+	margin: 0;
+	overflow: hidden;
+}
+
+
+
+
+/* Shared styles */
+
+button {
+	background: linear-gradient(to bottom, #f7f7f7 0%, #ddd 100%);
+	border: 1px solid #9c9c9c;
+	border-radius: 2px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font: inherit;
+	height: 29px;
+	outline: 0;
+	position: relative;
+}
+
+button:hover {
+	border-color: #7b7b7b;
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	color: #227b93;
+}
+
+button:active {
+	box-shadow: none;
+	color: #ff6c00;
+}
+
+input[type='range'] {
+	cursor: pointer;
+	margin: 4px 0 0 0;
+	padding: 0;
+	width: 250px;
+}
+
+
+
+
+/* Shape controls layout */
+
+#shape-controls-container {
+	background-color: rgba(255,255,255, 0.75);
+	position: absolute;
+		bottom: 0;
+	width: 100%;
+}
+
+#shape-controls-container > div {
+	display: table;
+	height: 54px;
+	margin: 0 auto;
+	width: 880px;
+}
+
+#shape-controls-container > div > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#shape-controls-container label {
+	padding: 0 5px 0 35px;
+}
+
+#shape-controls-container label:first-child {
+	padding: 0 5px 0 0;
+	text-transform: uppercase;
+}
+
+#shape-controls-container label:last-child {
+	padding: 0 15px 0 5px;
+}
+
+label#rotation-step-value-text {
+	box-sizing: border-box;
+	min-width: 50px;
+}
+
+
+
+
+/* Shape rotation motion control button */
+
+button#motion-control {
+	width: 29px;
+}
+
+button#motion-control.start:after {
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 9px solid #5a6662;
+	content: '';
+	position: absolute;
+		top: 8px;
+		left: 10px;
+}
+
+button#motion-control.start:hover:after {
+	border-left-color: #227b93;
+}
+
+button#motion-control.start:active:after {
+	border-left-color: #ff6c00;
+}
+
+button#motion-control.stop:after {
+	background-color: #5a6662;
+	content: '';
+	height: 9px;
+	position: absolute;
+		top: 9px;
+		left: 9px;
+	width: 9px;
+}
+
+button#motion-control.stop:hover:after {
+	background-color: #227b93;
+}
+
+button#motion-control.stop:active:after {
+	background-color: #ff6c00;
+}
+
+
+
+
+/* Shape rotation direction control button */
+
+button#direction-control {
+	color: #343c39;
+	font-size: 18px;
+	line-height: 29px;
+	width: 29px;
+}
+
+button#direction-control:hover {
+	color: #227b93;
+}
+
+button#direction-control:active {
+	color: #ff6c00;
+}
+
+button#direction-control.clockwise:after {
+	content: '\21b7';
+	display: inline-block;
+	line-height: 28px;
+}
+
+button#direction-control.counter-clockwise:after {
+	content: '\21b7';
+	display: inline-block;
+	line-height: 28px;
+	transform: scaleX(-1);
+}
+
+
+
+
+/* Scene controls layout */
+
+#scene-controls-container {
+	background-color: rgba(255,255,255, 0.75);
+	position: absolute;
+		top: 0;
+	width: 100%;
+}
+
+#scene-controls-container > div {
+	display: table;
+	height: 54px;
+	margin: 0 auto;
+	width: 1120px;
+}
+
+#scene-controls-container > div > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#scene-controls-container label {
+	padding: 0 5px 0 25px;
+}
+
+#scene-controls-container label:first-child {
+	padding: 0 5px 0 0;
+	text-transform: uppercase;
+}
+
+#scene-controls-container label:last-of-type {
+	padding: 0 15px 0 5px;
+}
+
+span#scene-zoom-value-text {
+	box-sizing: border-box;
+	display: inline-block;
+	min-width: 40px;
+}

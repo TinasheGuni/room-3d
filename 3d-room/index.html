@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Computer Graphics - Semester 1: Assignment 2</title>
+	<meta name="author" content="Stuart Green (48710202)" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" />
+	<link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+	<!-- Scene rotation control container -->
+	<div id="scene-controls-container">
+		<div>
+			<label><strong>Scene Controls:</strong></label>
+			<label>Camera Position:</label>
+			<div><input id="scene-rotation-control" type="range" min="-70" max="70" step="1" /></div>
+			<label>Zoom: -</label>
+			<div><input id="scene-zoom-control" type="range" min="0.2" max="3.5" step="0.01" /></div>
+			<label>+ <span id="scene-zoom-value-text"></span></label>
+			<div>
+				<button id="scene-toggle-button">Toggle Scene</button>
+				<button id="helpers-toggle-button">Toggle Helpers</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Shape controls container -->
+	<div id="shape-controls-container">
+		<div>
+			<label><strong>Shape Controls:</strong></label>
+			<label>Start/Stop:</label>
+			<div><button id="motion-control" class="stop"></button></div>
+			<label>Change Direction:</label>
+			<div><button id="direction-control" class="clockwise"></button></div>
+			<label>Change Speed:</label>
+			<div><input id="speed-control" type="range" min="0.01" max="0.4" step="0.01" /></div>
+			<label id="rotation-step-value-text"></label>
+		</div>
+	</div>
+	
+	<!-- three.js and assignment JavaScript -->
+	<script type="text/javascript" src="./scripts/three.min.js"></script>
+	<script type="text/javascript" src="./scripts/texture.data.js"></script>
+	<script type="text/javascript" src="./scripts/assignment.js"></script>
+	
+</body>
+</html>
